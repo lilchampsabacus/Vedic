@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 - Li'l Champs Vedic Mathematics</title>
+    <link rel="stylesheet" href="course-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="logo"><span class="highlight">Li'l Champs</span> Academy</div>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </header>
+
+    <div class="course-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <h3 class="level-title">Level 1: Basic</h3>
+            <ul class="chapter-list">
+                <li onclick="showChapter('ch1')" class="active">Ch 1: Digit Sums (Navashesh)</li>
+                <li onclick="showChapter('ch2')">Ch 2: Left-to-Right Addition</li>
+                <li onclick="showChapter('ch3')">Ch 3: Subtraction (Nikhilam)</li>
+                <li onclick="showChapter('ch4')">Ch 4: Vinculum Numbers</li>
+                <li onclick="showChapter('ch5')">Ch 5: Multiplication by 11s & 9s</li>
+                <li onclick="showChapter('ch6')">Ch 6: Base Multiplication</li>
+                <li onclick="showChapter('ch7')">Ch 7: Crosswise (2-Digit)</li>
+                <!-- Add the rest of your 16 chapters here -->
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            
+            <!-- Chapter 1 Content -->
+            <section id="ch1" class="chapter-content active-content">
+                <h2>Chapter 1: The Number's DNA — Digit Sums</h2>
+                <div class="sutra-box">
+                    <strong>The Secret Code:</strong> Navashesh ("Casting Out Nines")<br>
+                    <strong>The Superpower:</strong> Instantly checking if any mathematical answer is right or wrong!
+                </div>
+                <p>Think of a Digit Sum as the "DNA" or the fingerprint of a number. You find it by simply adding all the digits of a number together until you are left with just one single digit (from 1 to 9).</p>
+                
+                <h3>The Shortcut: "Casting Out 9s"</h3>
+                <p>Adding big numbers can slow you down. The fastest way to find a Digit Sum is to completely ignore the number 9, and ignore any numbers that add up to 9!</p>
+                
+                <div class="abacus-box">
+                    <h4>🧮 The Abacus Connection</h4>
+                    <p>Imagine you just finished a massive mental sprint. How do you know for sure you are 100% correct? You use the Digit Sum! The digit sum of your final answer must equal the digit sum of all the numbers you just added together.</p>
+                </div>
+            </section>
+
+            <!-- Chapter 2 Content -->
+            <section id="ch2" class="chapter-content">
+                <h2>Chapter 2: Speed Addition — Left to Right</h2>
+                <div class="sutra-box">
+                    <strong>The Secret Code:</strong> Puranapuranabhyam ("By Completion")<br>
+                    <strong>The Superpower:</strong> Adding numbers exactly the way you read them!
+                </div>
+                <p>In school, you are taught to add from right to left: units first, then tens, then hundreds. In Vedic Maths, we add from Left to Right—the exact same direction you read a book.</p>
+                
+                <div class="abacus-box">
+                    <h4>🧮 The Abacus Connection</h4>
+                    <p>On the abacus, you naturally calculate from left to right. Remember your fingering rules: if you need to carry a 10 to the next rod, always use your left hand thumb finger for +10!</p>
+                </div>
+            </section>
+
+            <!-- Add other chapter sections here with matching IDs (ch3, ch4, etc.) -->
+
+        </main>
+    </div>
+
+    <script src="course.js"></script>
+</body>
+</html>
