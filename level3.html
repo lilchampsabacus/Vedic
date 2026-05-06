@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 3 - Li'l Champs Vedic Mathematics</title>
+    <link rel="stylesheet" href="course-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="logo"><span class="highlight">Li'l Champs</span> Academy</div>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </header>
+
+    <div class="course-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <h3 class="level-title">Level 3: Advanced</h3>
+            <ul class="chapter-list">
+                <li onclick="showChapter('ch2')" class="active">Ch 2: One-Line Polynomial Division</li>
+                <li onclick="showChapter('ch7')">Ch 7: Coordinate Geometry Triples</li>
+                <li onclick="showChapter('ch9')">Ch 9 & 10: Calculus Shortcuts</li>
+                <!-- Add the rest of your Level 3 chapters here -->
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            
+            <!-- Chapter 2 Content -->
+            <section id="ch2" class="chapter-content active-content">
+                <h2>Chapter 2: One-Line Polynomial Division</h2>
+                <div class="sutra-box">
+                    <strong>The Secret Code:</strong> Paravartya Yojayet (Advanced)<br>
+                    <strong>The Superpower:</strong> Dividing algebra as easily as normal numbers!
+                </div>
+                <h3>Example: (x³ + 3x² − 4x + 7) ÷ (x − 2)</h3>
+                <p>Instead of long algebraic division, we use the Flag method from Level 2. The divisor is (x-2), so our Flag is <strong>+2</strong> (flip the sign!).</p>
+                <ul>
+                    <li>Line up the coefficients: 1, 3, -4, 7.</li>
+                    <li>Bring down the 1.</li>
+                    <li>Multiply by Flag (+2) and add. 1 × 2 = 2. Add to 3 = 5.</li>
+                    <li>Multiply by Flag (+2) and add. 5 × 2 = 10. Add to -4 = 6.</li>
+                    <li>Multiply by Flag (+2) and add. 6 × 2 = 12. Add to 7 = 19.</li>
+                </ul>
+                <p><strong>Quotient:</strong> x² + 5x + 6. <strong>Remainder:</strong> 19.</p>
+            </section>
+
+            <!-- Chapter 7 Content -->
+            <section id="ch7" class="chapter-content">
+                <h2>Chapter 7: Coordinate Geometry Triples</h2>
+                <div class="sutra-box">
+                    <strong>The Secret Code:</strong> Urdhva-Tiryagbhyam (Applied to Triples)<br>
+                    <strong>The Superpower:</strong> Doing Geometry without square roots!
+                </div>
+                <p>Instead of using messy distance formulas, we use Pythagorean Triples (like 3,4,5 or 5,12,13). We can combine them using the exact same Crosswise multiplication pattern you learned in Level 1 to find compound angles and perpendicular distances instantly.</p>
+            </section>
+
+            <!-- Chapter 9 & 10 Content -->
+            <section id="ch9" class="chapter-content">
+                <h2>Chapter 9 & 10: Calculus Shortcuts</h2>
+                <div class="sutra-box">
+                    <strong>The Secret Code:</strong> Chalana-Kalanabhyam ("Differential Calculus")<br>
+                    <strong>The Superpower:</strong> Differentiating and Integrating in one breath.
+                </div>
+                <h3>Vedic Differentiation</h3>
+                <p>For polynomials, simply multiply each coefficient by its power index, do a "1 down" on the power, and drop the constant.</p>
+                <p><strong>Example: 3x⁴ − 2x³ + 5x² − 7x + 1</strong></p>
+                <ul>
+                    <li>4 × 3 = 12x³</li>
+                    <li>3 × -2 = -6x²</li>
+                    <li>2 × 5 = 10x</li>
+                    <li>1 × -7 = -7</li>
+                </ul>
+                <p><strong>Answer:</strong> 12x³ − 6x² + 10x − 7</p>
+                
+                <div class="abacus-box">
+                    <h4>🧮 The Final Abacus Connection: The Ultimate Mental Canvas</h4>
+                    <p>When you reach Calculus, your brain is acting as a multi-layered abacus. You are holding variables on the 3rd rod, exponents on the 2nd rod, and constants on the 0th/right side rod. The Vedic Sutras are simply the software running on the incredible hardware of your trained abacus mind!</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="course.js"></script>
+</body>
+</html>
