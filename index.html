@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Li'l Champs Vedic Mathematics | Ambernath</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a premium educational look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="highlight">Li'l Champs</span> Academy
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#curriculum">The 3 Levels</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Master the Art of <span class="highlight">Vedic Mathematics</span></h1>
+            <p>Transform your mental abacus into a mathematical superpower. From speed arithmetic to competitive exam mastery, unlock your true potential.</p>
+            <a href="#curriculum" class="cta-btn">Explore the Curriculum</a>
+        </div>
+    </section>
+
+    <!-- Curriculum Levels Section -->
+    <section id="curriculum" class="levels-section">
+        <div class="section-header">
+            <h2>The Master Curriculum</h2>
+            <p>Our structured, 3-tier program designed for speed, accuracy, and absolute mathematical confidence.</p>
+        </div>
+
+        <div class="cards-container">
+            <!-- Level 1 Card -->
+            <div class="level-card" onclick="toggleDetails('level1')">
+                <div class="level-badge basic">Level 1</div>
+                <h3>Basic</h3>
+                <h4>Speed Arithmetic & Number Sense</h4>
+                <p>For Students of Class 6 and Above.</p>
+                <div id="level1-details" class="details">
+                    <ul>
+                        <li>Digit Sums & Verification</li>
+                        <li>Left-to-Right Speed Addition</li>
+                        <li>Nikhilam (No-Borrow Subtraction)</li>
+                        <li>Crosswise Multiplication Grids</li>
+                    </ul>
+                </div>
+                <button class="expand-btn">View Syllabus</button>
+            </div>
+
+            <!-- Level 2 Card -->
+            <div class="level-card" onclick="toggleDetails('level2')">
+                <div class="level-badge intermediate">Level 2</div>
+                <h3>Intermediate</h3>
+                <h4>Mastering Complex Operations</h4>
+                <p>For Students of Class 8 and Above.</p>
+                <div id="level2-details" class="details">
+                    <ul>
+                        <li>Flag Method Straight Division</li>
+                        <li>Magical Roots by Observation</li>
+                        <li>Mental Linear Equations</li>
+                        <li>Advanced Vinculum Arithmetic</li>
+                    </ul>
+                </div>
+                <button class="expand-btn">View Syllabus</button>
+            </div>
+
+            <!-- Level 3 Card -->
+            <div class="level-card" onclick="toggleDetails('level3')">
+                <div class="level-badge advanced">Level 3</div>
+                <h3>Advanced</h3>
+                <h4>Exam Mastery & Beyond</h4>
+                <p>For Class 10-12 & JEE/NEET Aspirants.</p>
+                <div id="level3-details" class="details">
+                    <ul>
+                        <li>One-Line Polynomial Division</li>
+                        <li>Calculus Integration & Differentiation</li>
+                        <li>Coordinate Geometry Triples</li>
+                        <li>Universal Divisibility Osculators</li>
+                    </ul>
+                </div>
+                <button class="expand-btn">View Syllabus</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2>Li'l Champs Abacus Academy</h2>
+            <p>Ambernath, Maharashtra, India</p>
+            <p class="copyright">&copy; 2026 Li'l Champs Abacus Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
