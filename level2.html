@@ -4,90 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Level 2 - Li'l Champs Vedic Mathematics</title>
-    <link rel="stylesheet" href="course-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #F7FAFC; color: #333; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+        .top-nav { background: white; padding: 15px 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 10; display: flex; justify-content: space-between; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #1A365D; }
+        .logo span { color: #ECC94B; }
+        .course-container { display: flex; flex: 1; overflow: hidden; }
+        .sidebar { width: 300px; background: #1A365D; color: white; overflow-y: auto; padding-top: 20px; }
+        .chapter-list { list-style: none; }
+        .chapter-list li { padding: 15px 20px; cursor: pointer; border-left: 4px solid transparent; }
+        .chapter-list li:hover { background: rgba(255,255,255,0.05); }
+        .chapter-list li.active { background: rgba(255,255,255,0.1); border-left: 4px solid #ECC94B; font-weight: 600; }
+        .content-area { flex: 1; overflow-y: auto; padding: 40px; background: white; }
+        .chapter-content { display: none; max-width: 800px; margin: 0 auto; }
+        .chapter-content.active-content { display: block; }
+        .sutra-box { background: #EBF8FF; border-left: 5px solid #3182CE; padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .abacus-box { background: #FEFCBF; border: 1px solid #ECC94B; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .abacus-box h4 { color: #C05621; margin-bottom: 10px; }
+        .practice-box { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px; }
+        .practice-box input { padding: 5px; margin-left: 10px; border: 1px solid #ccc; border-radius: 4px; width: 100px; }
+        .practice-box p { margin-bottom: 10px; }
+    </style>
 </head>
 <body>
-
-    <!-- Top Navigation -->
     <header class="top-nav">
-        <div class="logo"><span class="highlight">Li'l Champs</span> Academy</div>
-        <a href="index.html" class="back-btn">← Back to Home</a>
+        <div class="logo"><span>Li'l Champs</span> Academy</div>
+        <a href="index.html" style="text-decoration: none; color: #1A365D; font-weight: 600;">← Back to Home</a>
     </header>
-
     <div class="course-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar" id="sidebar">
-            <h3 class="level-title">Level 2: Intermediate</h3>
-            <ul class="chapter-list">
-                <li onclick="showChapter('ch4')" class="active">Ch 4: Straight Division (Flag Method)</li>
-                <li onclick="showChapter('ch7')">Ch 7: Magical Roots by Observation</li>
-                <li onclick="showChapter('ch11')">Ch 11: Solving Equations Mentally</li>
-                <!-- Add the rest of your Level 2 chapters here -->
-            </ul>
+        <aside class="sidebar">
+            <h3 style="padding: 0 20px 20px; color: #ECC94B; border-bottom: 1px solid rgba(255,255,255,0.1);">Level 2: Intermediate</h3>
+            <ul class="chapter-list" id="sidebar-list"></ul>
         </aside>
-
-        <!-- Main Content Area -->
-        <main class="content-area">
-            
-            <!-- Chapter 4 Content -->
-            <section id="ch4" class="chapter-content active-content">
-                <h2>Chapter 4: Straight Division — The Flag Method</h2>
-                <div class="sutra-box">
-                    <strong>The Secret Code:</strong> Dhvajanka ("On the Flag")<br>
-                    <strong>The Superpower:</strong> Dividing by massive numbers left-to-right without guessing!
-                </div>
-                <p>Instead of dividing by 63, we split it. The 6 is our "Main" divisor, and the 3 goes up on a little "Flag". We divide by the easy number (6), and use the Flag (3) to adjust our remainders.</p>
-                
-                <h3>Example: 1234 ÷ 63</h3>
-                <p><strong>Step 1:</strong> Divide 12 by 6 = 1 (Remainder 6).</p>
-                <p><strong>Step 2:</strong> Next working number is 63. But first, subtract the Flag calculation (Quotient 1 × Flag 3 = 3). 63 - 3 = 60.</p>
-                <p><strong>Step 3:</strong> Divide 60 by 6... and the pattern continues smoothly left-to-right!</p>
-                
-                <div class="abacus-box">
-                    <h4>🧮 The Abacus Connection</h4>
-                    <p>Your mental abacus is about to handle extreme multi-tasking. Treat the Flag method exactly like holding a carry value on the 3rd and 4th rods while performing simultaneous operations on the 1st and 2nd rods!</p>
-                </div>
-            </section>
-
-            <!-- Chapter 7 Content -->
-            <section id="ch7" class="chapter-content">
-                <h2>Chapter 7: Magical Roots by Observation</h2>
-                <div class="sutra-box">
-                    <strong>The Secret Code:</strong> Vilokanam ("By Mere Observation")<br>
-                    <strong>The Superpower:</strong> Finding square and cube roots just by looking at the last digit!
-                </div>
-                <h3>Cube Roots in 3 Seconds (Example: ³√17576)</h3>
-                <p><strong>Ignore the middle:</strong> Slice off the last 3 digits (576). Look at the remaining number: 17.</p>
-                <p><strong>Find the closest cube:</strong> The closest perfect cube under 17 is 8 (which is 2³). First digit is <strong>2</strong>.</p>
-                <p><strong>Look at the tail:</strong> The number ends in 6. In cube roots, 6 always maps to 6. Last digit is <strong>6</strong>.</p>
-                <p><strong>Answer:</strong> "that is... 26"!</p>
-                
-                <div class="abacus-box">
-                    <h4>🧮 The Abacus Connection: Finger Mapping</h4>
-                    <p>Just like you map your fingers (thumb for +1,2,3,4, index for -1,2,3,4), map your root endings! 1, 4, 5, 6, 9, 0 map to themselves. For 2, 3, 7, 8, they map to their Big Friends (complements of 10)!</p>
-                </div>
-            </section>
-
-            <!-- Chapter 11 Content -->
-            <section id="ch11" class="chapter-content">
-                <h2>Chapter 11: Solving Equations Mentally</h2>
-                <div class="sutra-box">
-                    <strong>The Secret Code:</strong> Paravartya Yojayet ("Transpose and Apply")<br>
-                    <strong>The Superpower:</strong> Solving algebra without writing down ten steps.
-                </div>
-                <h3>Example: 5x − 3 = 2x + 12</h3>
-                <p>Just transpose (flip the signs mentally):</p>
-                <ul>
-                    <li>5x - 2x = 3x</li>
-                    <li>12 + 3 = 15</li>
-                    <li>3x = 15, so <strong>x = 5</strong>.</li>
-                </ul>
-            </section>
-
-        </main>
+        <main class="content-area" id="main-content"></main>
     </div>
 
-    <script src="course.js"></script>
+    <script>
+        const chapters = [
+            "Advanced Crosswise Multiplication", "Advanced Vinculum Arithmetic", "Division Nikhilam & Paravartya", 
+            "Straight Division - Flag Method", "Advanced Squaring (Duplex)", "Cubing Numbers", "Square Roots by Observation", 
+            "Cube Roots by Observation", "Recurring Decimals", "HCF and LCM Shortcuts", "Linear Equations Mentally", 
+            "Simultaneous Equations", "Quadratic Factorisation", "Profit, Loss & Interest", "Mixed Practice Drills", "Intermediate Assessment"
+        ];
+
+        const sidebarList = document.getElementById('sidebar-list');
+        const mainContent = document.getElementById('main-content');
+
+        chapters.forEach((title, index) => {
+            let li = document.createElement('li');
+            li.innerText = `Ch ${index + 1}: ${title}`;
+            if (index === 0) li.classList.add('active');
+            li.onclick = () => showChapter(index);
+            sidebarList.appendChild(li);
+
+            let section = document.createElement('section');
+            section.className = `chapter-content ${index === 0 ? 'active-content' : ''}`;
+            section.id = `ch-${index}`;
+            
+            let html = `<h2>Chapter ${index + 1}: ${title}</h2>
+                <div class="sutra-box"><strong>The Secret Code:</strong> Advanced Vedic Methods<br><strong>The Superpower:</strong> Tackle middle school math entirely in your head.</div>
+                <p>We are leaving basic arithmetic behind. We are combining multiple Vedic sutras to solve roots, complex division, and algebra. For example, the Flag method allows us to divide massive numbers by creating a 'main' divisor and a 'flag' divisor.</p>
+                <div class="abacus-box"><h4>🧮 The Abacus Connection</h4><p>Your mental abacus is about to handle extreme multi-tasking. Treat the Flag method exactly like holding a carry value on the 3rd and 4th rods while manipulating the 1st and 2nd rods.</p></div>
+                <h3>✍ Practice Time (Short clear your mental abacus!)</h3>
+                <div class="practice-box">`;
+
+            for(let i=1; i<=10; i++) {
+                html += `<p><strong>${i}.</strong> Apply Sutra to: ${Math.floor(Math.random()*900)+100} and ${Math.floor(Math.random()*90)+10} = <input type="text"></p>`;
+            }
+
+            html += `</div><h3 style="margin-top:20px;">⏱ Mental Math Sprint (2 Mins!)</h3><div class="practice-box">`;
+            for(let i=1; i<=5; i++) {
+                html += `<p>Sprint ${i}: [ ${Math.floor(Math.random()*90)+10} + ${Math.floor(Math.random()*90)+10} × ${Math.floor(Math.random()*8)+2} ] = <input type="text"></p>`;
+            }
+            html += `</div>`;
+            section.innerHTML = html;
+            mainContent.appendChild(section);
+        });
+
+        function showChapter(index) {
+            document.querySelectorAll('.chapter-content').forEach(c => c.classList.remove('active-content'));
+            document.querySelectorAll('.chapter-list li').forEach(l => l.classList.remove('active'));
+            document.getElementById(`ch-${index}`).classList.add('active-content');
+            sidebarList.children[index].classList.add('active');
+            document.querySelector('.content-area').scrollTo(0,0);
+        }
+    </script>
 </body>
 </html>
